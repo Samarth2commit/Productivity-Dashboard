@@ -44,7 +44,7 @@
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 #theme-toggle:hover{
-    transform: sacle(1.15);
+    transform: scale(1.15);
     color:var(--accent-light);
 }
 #theme-toggle.ri-sun-fill {
@@ -105,7 +105,9 @@ main{
         -ms-flex-align: center;
             align-items: center;
     scroll-snap-align: start;
-    
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 
 }
 
@@ -325,6 +327,8 @@ main{
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 2vw;
+        margin-right: 30px;
+
 }
 .topbar button{
     border-radius: 30px;
