@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="shortcut icon" href="./android-chrome-192x192.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="navbar">
+                <h2>
+                    Productivity Dashboard
+                </h2>
+                <i class="ri-moon-line" id="theme-toggle"></i>
+            </div>
+            <div class="banner">
+                <div class="innerBanner">
+                    
+                <div class="right">
+                    <div class="leftside">
+                       <h1>Saturday,1:00pm</h1>
+                       <h2>Pune,india</h2>
+
+                        
+                    </div>
+                    <div class="rightside">
+                       <h1 id="temp">20 C</h1>
+                       <h2 id="weather">Light Rain</h2>
+                       <h3 id="preci">Precipitation:35%</h3>
+                       <h3 id="humi">Humidity:49%</h3>
+                       <h3 id="wind">Wind:10Kmph</h3>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="scroller allELem">
+
+                <div id="0" class="todo Elem"><div class="elemtop"></div><div class="elembottom"><h2>todo</h2></div></div>
+                <div id="1" class="Scheduler Elem"><div class="elemtop"></div><div class="elembottom"><h2>scheduler</h2></div></div>
+                <div id="2" class="motivation Elem"><div class="elemtop"></div><div class="elembottom"><h2>motivation</h2></div></div>
+                <div id="3" class="pomodoro Elem"><div class="elemtop"></div><div class="elembottom"><h2>pomodoro</h2></div></div>
+                <div id="4" class="goals Elem"><div class="elemtop"></div><div class="elembottom"><h2>goals</h2></div></div>
+            </div>
+        </section>
+        <section class="fullElem Todo">
+            <div class="topbar">
+                <h1>Todo page</h1>
+                <button id ="0"class="Back"><i class="ri-close-circle-line"></i></button>
+            </div>
+            <div class="Todo-inner">
+                <div class="addtask-todo-left">
+                <form>
+                    
+                    <input type="text"  id="task-input" placeholder="Enter the Task">
+                    <textarea placeholder="Enter Details" id="task-area"></textarea>
+                    <div class="mark-imp">
+                        <input  type="checkbox" name="box" id="task-check">
+                        <label for="task-check">Important</label>
+                    </div>                  
+                    <button>Add task</button>
+                </form>
+            </div>
+            <div class="tasklist-todo-right">
+              <div class="AllTasks">
+                <h1>All tasks</h1>
+              </div>  
+            </div>
+
+            </div>
+        </section>
+        <section class="fullElem Schedule">
+            <div class="topbar">
+                <h1>Schdule</h1>
+                <button id ="1"class="Back"><i class="ri-close-circle-line"></i></button>
+            </div>
+            <div class="contents">
+                
+            </div>
+                
+          
+            
+        </section>
+        <section class="fullElem Motivation">
+            <div class="topbar">
+                <h1>Motivation</h1>
+                <button id ="2"class="Back"><i class="ri-close-circle-line"></i></button>
+            </div>
+            <div class="motivationOuter">
+                <!--filter blur -->
+                <div class="motivationInner">
+                    <div class="moti1">
+                        <h2>Quote of the Day</h2>
+                    </div>
+                    <div class="moti2">
+                        <h1></h1>
+                    </div>
+                    <div class="author">
+                        <h2></h2>
+                    </div>
+            </div>
+            </div>
+            
+        </section>
+        <section class="fullElem Pomodoro">
+           <div class="topbar">
+            <h1>pomodoro</h1>
+            <button id ="3"class="Back"><i class="ri-close-circle-line"></i></button>
+            </div>
+            <div class="pomo-timer">
+                <h2>25:00</h2>
+                <div class="btnall">
+                <button class="pomo-start btn">Start</button>
+                <button class="pomo-pause btn">Pause</button>
+                <button class="pomo-reset btn">Reset</button>
+                </div>
+            </div>
+            <div class="Session">
+                <h2>WorkSession</h2>
+            </div>
+        </section>
+        <section class="fullElem Daily_goals">
+            <div class="topbar">
+                <h1>Daily  goals</h1>
+                <button id ="4"class="Back"><i class="ri-close-circle-line"></i></button>
+            </div>
+            <div class="goal-wrapper">
+                <div class="goals-input-area">
+                    <input type="text" id="goal-title" placeholder="Write your Goal...">
+                    <textarea id="goal-desc" rows="2" placeholder="Describe it!"></textarea>
+                    <button id="add-goal-btn">Add Goal</button>
+                </div>
+                <div class="goal-lists" id="goals-list"></div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
