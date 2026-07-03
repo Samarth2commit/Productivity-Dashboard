@@ -1,4 +1,4 @@
-# Productivity-Dashboard# Productivity Dashboard
+#Productivity Dashboard
 
 A modern, responsive **Single Page Application (SPA)** built using **HTML5, CSS3, and Vanilla JavaScript**. This dashboard brings together essential productivity tools into one clean interface, helping users stay organized and focused throughout the day.
 
