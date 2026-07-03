@@ -140,17 +140,35 @@ Scheduler();
 function motivation(){
     let content=document.querySelector('.moti2 h1')
     let author=document.querySelector('.author h2')
+    if (!content || !author) {
+        console.error("Quote elements not found in the DOM!");
+        return;
+    }
     async function fetchQuote(){
+    try{
+        let response=await fetch('https://api.quotable.io/random');
+        if(!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+    }
     
-    let response=await fetch('https://api.quotable.io/random')
+    
    let data=(await response.json());
     content.innerHTML=data.content;
     author.innerHTML=data.author;
-    
+    }
+    catch(error){
+        console.error("Could not fetch the quote:", error);
+        content.innerHTML = "Stay positive, work hard, make it happen.";
+        author.innerHTML = "- Unknown";
+    }   
 }
+
+
 fetchQuote()
 }
-motivation();
+document.addEventListener('DOMContentLoaded', motivation);
+
+
 function PomodoroTimer(){
     let timerInterval=null;
 let startbtn=document.querySelector('.pomo-start');
@@ -225,7 +243,7 @@ function weatherandcity(){
     let city='Pune';
     async function coordinates(){
     let response=await fetch(
-    "https://geocoding-api.open-meteo.com/v1/search?name=city&count=1&language=en&format=json"
+    `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=en&format=json`
 )
 let data=await response.json();
 return{

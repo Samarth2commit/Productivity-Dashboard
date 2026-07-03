@@ -1143,7 +1143,7 @@ details .task-details p{
 
 }
 /* for motivation */
-@media(max-width:990px){
+@media(max-width:900px){
 .Motivation .motivationOuter{
     height: 95vw;
     width: 90vw;
