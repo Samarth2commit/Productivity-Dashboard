@@ -61,9 +61,6 @@ imp_check.checked=false;
 }
 inputTasks();
 
-
-
-
 function RenderTasks(){
     
 let AllTasks=document.querySelector('.AllTasks');
@@ -101,11 +98,6 @@ document.querySelectorAll('.tasks button').forEach(function(btn){
 
 }
 RenderTasks();
-
-    
-
-
-
 
 }
 Todo();
@@ -211,7 +203,7 @@ function startTimer(){
             totalseconds=25*60;
         }
         
-    },10)
+    },1000)
     } 
     
 
@@ -230,9 +222,10 @@ resetbtn.addEventListener('click',resetTimer);
 }
 PomodoroTimer();
 function weatherandcity(){
+    let city='Pune';
     async function coordinates(){
     let response=await fetch(
-    "https://geocoding-api.open-meteo.com/v1/search?name=Berlin&count=1&language=en&format=json"
+    "https://geocoding-api.open-meteo.com/v1/search?name=city&count=1&language=en&format=json"
 )
 let data=await response.json();
 return{
@@ -261,7 +254,7 @@ console.log(result);
 preci.innerHTML=`Precipitation:${result.current.precipitation_probability}%`
 humi.innerHTML=`Humidity:${result.current.relative_humidity_2m}%`
 wind.innerHTML=`Wind:${result.current.wind_speed_10m}Kmph`
-temp.innerHTML=`${result.current.temperature_2m}C`
+temp.innerHTML=`${result.current.temperature_2m}°C`
 
 
 }weatherAPI();
@@ -314,7 +307,7 @@ elements.forEach(function(card){
 })
 }
 observer();
-// localStorage.clear()
+
 function DailyGoals(){
     const titleInput=document.getElementById('goal-title');
     const descInput=document.getElementById('goal-desc');
